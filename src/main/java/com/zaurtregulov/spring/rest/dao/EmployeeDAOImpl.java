@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+// работает с БД
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO{
 
@@ -18,7 +19,6 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     @Override
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
-//        List<Employee> allEmployees = session.createQuery("from Employee", Employee.class).getResultList();
         Query<Employee> query = session.createQuery("from Employee", Employee.class);
         List<Employee> allEmployees = query.getResultList();
         return allEmployees;

@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+// перенаправляет всю работу на репозиторий, который делает всю работу с БД
 @Service
 public class EmployeeServiceImpl  implements EmployeeService{
 
